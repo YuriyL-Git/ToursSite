@@ -1,0 +1,25 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for Natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuriyL-Git/ToursSite.git"
+  },
+  "author": "Yuriy Lipchey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuriyL-Git/ToursSite/issues"
+  },
+  "homepage": "https://github.com/YuriyL-Git/ToursSite#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,13 +1,4 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-
+/*--------------------------- default ------------------------------------*/
 html {
   font-size: 62.5%;
 }
@@ -30,31 +21,23 @@ body {
   padding: 3rem;
 }
 
-
+/*--------------------------- header -------------------------------------*/
 .header {
   height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(128, 214, 113, 0.7),
-      rgba(40, 180, 133, 0.7)),
-  url(../img/hero.jpg);
-
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -63,33 +46,30 @@ body {
   text-align: center;
 }
 
+/*------------------------- heading --------------------------------------*/
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   /*to remove shaking during animation */
   backface-visibility: hidden;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   margin-bottom: 1rem;
-
   animation: moveInRight 1s ease-in-out;
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.74rem;
-
   animation: moveInLeft 1s ease-in-out;
-
 }
 
+/*------------------------- keyframes ------------------------------------*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -106,7 +86,6 @@ body {
     transform: translateX(0);
   }
 }
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -120,7 +99,6 @@ body {
     transform: translateX(0);
   }
 }
-
 @keyframes moveInUp {
   0% {
     opacity: 0;
@@ -131,39 +109,35 @@ body {
     transform: translateY(0);
   }
 }
-
-.btn:link,
-.btn:visited {
+/*---------------------------- btn ---------------------------------------*/
+.btn:link, .btn:visited {
   margin-top: 10rem;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 200rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
-
 }
-
 .btn:hover {
-  transform: translateY(-.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2)
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2)
-
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
 .btn--white {
   background-color: white;
   color: #777;
 }
-
+.btn--white::after {
+  background-color: white;
+}
 .btn::after {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -172,22 +146,13 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s;
+  transition: all 0.4s;
   opacity: 0.2;
 }
-
-.btn--white::after {
-  background-color: white;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   animation: moveInUp 0.3s ease-in-out 0.75s;
   /*will apply starting styles before the animation starts*/
   animation-fill-mode: backwards;
 }
 
+/*# sourceMappingURL=style.css.map */
