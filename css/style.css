@@ -1,6 +1,21 @@
-/*--------------------------- default ------------------------------------*/
+/*---------------------------- default ------------------------------------*/
 html {
   font-size: 62.5%;
+}
+@media (max-width: 56.24em) {
+  html {
+    font-size: 50.5%;
+  }
+}
+@media (max-width: 37.49em) {
+  html {
+    font-size: 30.5%;
+  }
+}
+@media (min-width: 100.01em) {
+  html {
+    font-size: 90.5%;
+  }
 }
 
 *,
@@ -13,63 +28,15 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #777;
   padding: 3rem;
 }
-
-/*--------------------------- header -------------------------------------*/
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-}
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-.header__logo {
-  height: 3.5rem;
-}
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+@media (max-width: 56.24em) {
+  body {
+    padding: 0;
+  }
 }
 
-/*------------------------- heading --------------------------------------*/
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /*to remove shaking during animation */
-  backface-visibility: hidden;
-}
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  margin-bottom: 1rem;
-  animation: moveInRight 1s ease-in-out;
-}
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  animation: moveInLeft 1s ease-in-out;
-}
-
-/*------------------------- keyframes ------------------------------------*/
+/*---------------------------- animation ----------------------------------*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -109,6 +76,60 @@ body {
     transform: translateY(0);
   }
 }
+/*------------------------- heading --------------------------------------*/
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /*to remove shaking during animation */
+  backface-visibility: hidden;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  margin-bottom: 1rem;
+  animation: moveInRight 1s ease-in-out;
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.74rem;
+  animation: moveInLeft 1s ease-in-out;
+}
+
+/*------------------------- body ------------------------------------------*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+}
+
+.heading-secondary {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, lawngreen, green);
+  display: inline-block;
+  width: 50%;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewY(-2deg) skewX(15deg) scale(1.1);
+  cursor: pointer;
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+/*
+0-600px: phone
+
+*/
 /*---------------------------- btn ---------------------------------------*/
 .btn:link, .btn:visited {
   margin-top: 10rem;
@@ -124,6 +145,10 @@ body {
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 .btn:active {
   transform: translateY(-1px);
@@ -153,6 +178,31 @@ body {
   animation: moveInUp 0.3s ease-in-out 0.75s;
   /*will apply starting styles before the animation starts*/
   animation-fill-mode: backwards;
+}
+
+/*--------------------------- header -------------------------------------*/
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
